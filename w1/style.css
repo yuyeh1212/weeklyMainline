@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  flex: 0 0 calc(50% - 10px); /* 減去 gap 的一半 */
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 確保在較小螢幕上也能正常顯示 */
+@media (max-width: 768px) {
+  .box {
+    flex: 0 0 100%;
+  }
+}

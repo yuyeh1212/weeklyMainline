@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="旅遊套票網站 - 提供台灣各地旅遊套票查詢與購買"
+    />
+    <meta name="keywords" content="旅遊,套票,台北,台中,高雄,行程" />
+    <title>第五週-期中試煉</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="addTicket-panel">
+        <div class="addTicket-img">
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/main_img.png?raw=true"
+            alt="風景圖"
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/logo.png?raw=true"
+            alt="網站標誌"
+          />
+        </div>
+        <form action="" class="addTicket-form" novalidate>
+          <h1 class="title">
+            <span><i class="fas fa-plus-circle" aria-hidden="true"></i></span
+            >新增旅遊套票
+          </h1>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketName">套票名稱</label>
+              <input
+                type="text"
+                id="ticketName"
+                placeholder="請填寫套票名稱"
+                name="套票名稱"
+                required
+              />
+            </div>
+            <div class="alert-message">
+              <p id="ticketName-message" data-message="套票名稱"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketImgUrl">圖片網址</label>
+              <input
+                type="url"
+                id="ticketImgUrl"
+                placeholder="請填寫圖片網址"
+                name="圖片網址"
+                required
+              />
+            </div>
+            <div class="alert-message">
+              <p id="ticketImgUrl-message" data-message="圖片網址"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketRegion">景點地區</label>
+              <select id="ticketRegion" name="景點地區" required>
+                <option value="" disabled selected hidden>
+                  請選擇景點地區
+                </option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+              </select>
+            </div>
+            <div class="alert-message">
+              <p id="ticketRegion-message" data-message="景點地區"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketPrice">套票金額</label>
+              <input
+                type="number"
+                id="ticketPrice"
+                placeholder="請填寫套票金額"
+                name="套票金額"
+                min="0"
+                required
+              />
+            </div>
+            <div class="alert-message">
+              <p id="ticketPrice-message" data-message="套票金額"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketNum">套票組數</label>
+              <input
+                type="number"
+                id="ticketNum"
+                placeholder="請填寫套票組數"
+                name="套票組數"
+                min="1"
+                required
+              />
+            </div>
+            <div class="alert-message">
+              <p id="ticketNum-message" data-message="套票組數"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketRate">套票星級</label>
+              <input
+                type="number"
+                id="ticketRate"
+                placeholder="請填寫套票星級"
+                name="套票星級"
+                min="1"
+                max="10"
+                required
+              />
+            </div>
+            <div class="alert-message">
+              <p id="ticketRate-message" data-message="套票星級"></p>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="addTicket-input">
+              <label for="ticketDescription">套票描述</label>
+              <textarea
+                name="套票描述"
+                id="ticketDescription"
+                placeholder="請填寫套票描述 (限 100 字)"
+                maxlength="100"
+                required
+              ></textarea>
+            </div>
+            <div class="alert-message">
+              <p id="ticketDescription-message" data-message="套票描述"></p>
+            </div>
+          </div>
+          <button type="button" class="addTicket-btn btn">新增套票</button>
+        </form>
+      </section>
+    </header>
+
+    <main class="main-content">
+      <!-- 搜尋區 -->
+      <div class="search-area">
+        <select name="region" class="regionSearch" aria-label="地區搜尋">
+          <option value="" selected>全部地區</option>
+          <option value="台北">台北</option>
+          <option value="台中">台中</option>
+          <option value="高雄">高雄</option>
+        </select>
+        <p id="searchResult-text">本次搜尋共 3 筆資料</p>
+      </div>
+
+      <!-- 套票卡片區 -->
+      <ul class="ticketCard-area" aria-label="套票列表"></ul>
+
+      <!-- 查無關鍵字區 -->
+      <div class="cantFind-area">
+        <h3>查無此關鍵字資料</h3>
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/no_found.png?raw=true"
+          alt="查無資料圖示"
+        />
+      </div>
+    </main>
+
+    <!-- 連結外部 JavaScript 檔案 -->
+    <script src="./app.js"></script>
+  </body>
+</html>

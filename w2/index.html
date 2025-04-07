@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第二週-邏輯判斷之術</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h3 class="title">第一題</h3>
+        <img class="img" src="./img/01.png" alt="" />
+        <p>(1) <span id="a"></span></p>
+        <p>(2) <span id="b"></span></p>
+        <p>(3) <span id="ab"></span></p>
+        <p>(4) <span id="c"></span></p>
+        <p>(5) <span id="d"></span></p>
+        <p>(6) <span id="e"></span></p>
+        <p>(7) <span id="f"></span></p>
+        <p>(8) <span id="ef"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第二題</h3>
+        <img class="img" src="./img/02.png" alt="" />
+        <p>(1) <span id="g"></span></p>
+        <p>(2) <span id="h"></span></p>
+        <p>(3) <span id="gh"></span></p>
+        <p>(4) <span id="i"></span></p>
+        <p>(5) <span id="j"></span></p>
+        <p>(6) <span id="ij"></span></p>
+        <p>(7) <span id="kl"></span></p>
+        <p>(7)說明: <span id="illustrate"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第三題</h3>
+        <img class="img" src="./img/03.png" alt="" />
+        <p>m= <span id="m"></span></p>
+        <p>n= <span id="n"></span></p>
+        <p>說明: <span id="illustrate2"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第四題</h3>
+        <img class="img" src="./img/04.png" alt="" />
+        <p>總共支付<span id="billTotal"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第五題</h3>
+        <img class="img" src="./img/05.png" alt="" />
+        <p>小華共得了<span id="badge"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第六題</h3>
+        <img class="img" src="./img/06.png" alt="" />
+        <p>(1)<span id="o"></span></p>
+        <p>(2)<span id="p"></span></p>
+        <p>(3)<span id="op"></span></p>
+        <p>是否折價:<span id="isSale"></span></p>
+        <p>說明：<span id="illustrate3"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第七題</h3>
+        <img class="img" src="./img/07.png" alt="" />
+        <p>根據您的體重：<span id="illustrate4"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第八題</h3>
+        <img class="img" src="./img/08.png" alt="" />
+        <p>是否符合贈品資格:<span id="qualifications"></span></p>
+        <p>剩餘贈品:<span id="freebies"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第九題</h3>
+        <img class="img" src="./img/09.png" alt="" />
+        <p>小明帳單總共是:<span id="mingBill"></span></p>
+      </div>
+      <div class="box">
+        <h3 class="title">第十題</h3>
+        <img class="img" src="./img/10.png" alt="" />
+        <label for="playerA">玩家A：</label>
+        <select id="playerA">
+          <option value="剪刀">剪刀</option>
+          <option value="石頭">石頭</option>
+          <option value="布">布</option>
+        </select>
+
+        <label for="playerB">玩家B：</label>
+        <select id="playerB">
+          <option value="剪刀">剪刀</option>
+          <option value="石頭">石頭</option>
+          <option value="布">布</option>
+        </select>
+
+        <br />
+        <button onclick="checkWinner()">判斷勝負</button>
+
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <!-- 連結外部 JavaScript 檔案 -->
+    <script src="./app.js"></script>
+  </body>
+</html>

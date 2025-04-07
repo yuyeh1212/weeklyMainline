@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>週次作業展示</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>週次作業展示</h1>
+        <p>點擊每週作業查看詳情</p>
+      </header>
+
+      <main>
+        <div class="weeks-container">
+          <!-- 週次卡片區域 -->
+          <div class="week-card" data-folder="w1">
+            <div class="card-content">
+              <h2>第一週</h2>
+              <p>HTML, CSS, JavaScript 基礎</p>
+              <div class="card-icon">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-card" data-folder="w2">
+            <div class="card-content">
+              <h2>第二週</h2>
+              <p>進階HTML與CSS</p>
+              <div class="card-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-card" data-folder="w3">
+            <div class="card-content">
+              <h2>第三週</h2>
+              <p>JavaScript 進階概念</p>
+              <div class="card-icon">
+                <i class="fas fa-js-square"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-card" data-folder="w4">
+            <div class="card-content">
+              <h2>第四週</h2>
+              <p>響應式網頁設計</p>
+              <div class="card-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-card" data-folder="w5">
+            <div class="card-content">
+              <h2>第五週</h2>
+              <p>API與AJAX</p>
+              <div class="card-icon">
+                <i class="fas fa-server"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-card" data-folder="w6">
+            <div class="card-content">
+              <h2>第六週</h2>
+              <p>前端框架入門</p>
+              <div class="card-icon">
+                <i class="fas fa-th-large"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="week-card" data-folder="w7">
+            <div class="card-content">
+              <h2>第七週</h2>
+              <p>前端專案實作</p>
+              <div class="card-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第八週特殊卡片 -->
+          <div class="week-card special" id="week8">
+            <div class="card-content">
+              <h2>第八週</h2>
+              <p>最終專案</p>
+              <div class="card-links">
+                <a
+                  href="https://codepen.io/yuyeh1212/pen/RwXXPNw"
+                  target="_blank"
+                  class="btn"
+                >
+                  <i class="fas fa-desktop"></i> 前台
+                </a>
+                <a
+                  href="https://codepen.io/yuyeh1212/pen/NWQQzNd"
+                  target="_blank"
+                  class="btn"
+                >
+                  <i class="fas fa-cog"></i> 後台
+                </a>
+              </div>
+              <div class="card-icon">
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 週次作業展示</p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
