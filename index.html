@@ -90,26 +90,39 @@
             </div>
           </div>
 
-          <!-- 第八週特殊卡片 -->
+          <!-- 第八週特殊卡片 - 整合本地檔案 -->
           <div class="week-card special" id="week8">
             <div class="card-content">
               <h2>第八週</h2>
               <p>最終專案</p>
               <div class="card-links">
-                <a
-                  href="https://codepen.io/yuyeh1212/pen/RwXXPNw"
-                  target="_blank"
-                  class="btn"
-                >
+                <!-- 本地檔案連結 -->
+                <a href="w8/index.html" target="_blank" class="btn">
                   <i class="fas fa-desktop"></i> 前台
                 </a>
-                <a
-                  href="https://codepen.io/yuyeh1212/pen/NWQQzNd"
-                  target="_blank"
-                  class="btn"
-                >
+                <a href="w8/backend.html" target="_blank" class="btn">
                   <i class="fas fa-cog"></i> 後台
                 </a>
+                <!-- 保留 CodePen 連結作為備選 -->
+                <div class="codepen-links">
+                  <p>CodePen 版本：</p>
+                  <div class="card-links">
+                    <a
+                      href="https://codepen.io/yuyeh1212/pen/RwXXPNw"
+                      target="_blank"
+                      class="btn secondary"
+                    >
+                      <i class="fab fa-codepen"></i> 前台
+                    </a>
+                    <a
+                      href="https://codepen.io/yuyeh1212/pen/NWQQzNd"
+                      target="_blank"
+                      class="btn secondary"
+                    >
+                      <i class="fab fa-codepen"></i> 後台
+                    </a>
+                  </div>
+                </div>
               </div>
               <div class="card-icon">
                 <i class="fas fa-star"></i>
@@ -118,12 +131,10 @@
           </div>
         </div>
       </main>
-
       <footer>
         <p>&copy; 2025 週次作業展示</p>
       </footer>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>

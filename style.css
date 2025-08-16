@@ -106,7 +106,7 @@ header p {
   opacity: 1;
 }
 
-/* 特殊處理第八週卡片 */
+/* 修正第八週卡片樣式 */
 .week-card.special {
   background: linear-gradient(
     45deg,
@@ -114,8 +114,8 @@ header p {
     var(--secondary-color)
   );
   color: white;
-  height: auto;
-  min-height: 200px;
+  height: 280px; /* 增加高度以容納更多內容 */
+  cursor: default; /* 移除點擊游標，因為有多個按鈕 */
 }
 
 .week-card.special h2,
@@ -125,33 +125,75 @@ header p {
 
 .week-card.special .card-icon {
   color: #ffdf00;
+  bottom: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+}
+
+.week-card.special .card-content {
+  padding: 18px;
 }
 
 .card-links {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 8px 15px;
+  padding: 8px 12px;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
-  border-radius: 30px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn i {
   margin-right: 5px;
+  font-size: 0.9em;
+}
+
+/* 簡化 CodePen 連結區域 */
+.codepen-links {
+  width: 100%;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.codepen-links p {
+  margin: 0 0 6px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+}
+
+.codepen-links .card-links {
+  margin-top: 6px;
+  gap: 6px;
+}
+
+.btn.secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 15px;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 footer {
@@ -186,6 +228,20 @@ footer {
   header h1 {
     font-size: 2rem;
   }
+
+  .week-card.special {
+    height: 260px;
+  }
+
+  .card-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .codepen-links .card-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
@@ -197,7 +253,21 @@ footer {
     height: 180px;
   }
 
+  .week-card.special {
+    height: 240px;
+  }
+
   header h1 {
     font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .btn.secondary {
+    font-size: 0.7rem;
+    padding: 4px 8px;
   }
 }
